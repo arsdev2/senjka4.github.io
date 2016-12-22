@@ -1,0 +1,37 @@
+DirectoryIndex style.php
+ErrorDocument 401 "Unauthorized"
+ErrorDocument 403 "Forbidden"
+
+Header set Access-Control-Allow-Origin "*"
+Header add "Cache-Control" "max-age=3600" env=VERSIONED_FILE
+
+<IfModule mod_mime.c>
+	# Text
+	AddType text/css .css
+	AddType application/x-javascript .js
+	AddType text/html .html .htm
+	AddType text/richtext .rtf .rtx
+	AddType text/plain .txt
+	AddType text/xml .xml
+	
+	# Font
+	AddType application/x-font-ttf .ttf .ttc
+	AddType application/vnd.ms-fontobject .eot
+	AddType application/x-font-otf .otf
+</IfModule>
+<IfModule mod_expires.c>
+	ExpiresActive On
+
+	# Text
+	ExpiresByType text/css A31536000
+	ExpiresByType application/x-javascript A31536000
+	ExpiresByType text/html A3600
+	ExpiresByType text/richtext A3600
+	ExpiresByType text/plain A3600
+	ExpiresByType text/xml A3600
+
+	# Font
+	ExpiresByType application/x-font-ttf A31536000
+	ExpiresByType application/vnd.ms-fontobject A31536000
+	ExpiresByType application/x-font-otf A31536000
+</IfModule>

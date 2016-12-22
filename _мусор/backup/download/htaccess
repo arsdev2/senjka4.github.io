@@ -1,0 +1,5 @@
+DirectoryIndex index.php index.cgi index.html 
+ErrorDocument 401 "Unauthorized" 
+ErrorDocument 403 "Forbidden" 
+
+Header set Content-Disposition "attachment"

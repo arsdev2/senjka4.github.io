@@ -1,0 +1,22 @@
+<html>
+<head>
+
+</head>
+<body>
+<p id="time">Time left</p>
+</body>
+<script>
+var timerId = setInterval(function() {
+  timer = timer - 1000;
+	document.getElementById("time").innerHTML = "Time left: " + timer /1000;
+}, 1000);
+var timer  = 60000;
+/*
+setTimeout(function() {
+  clearInterval(timerId);
+  alert( 'стоп' );
+}, 5000);
+*/
+</script>
+
+</html>

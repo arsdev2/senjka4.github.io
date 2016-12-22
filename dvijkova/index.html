@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<title>Dvijkova</title>
+</head>
+<body onload="init()" onhashchange="init()">
+	<p id="time">Time left</p>
+	<table width="100%" height="100%">
+		<tr>
+			<td width="300px">
+				<ul>
+					<li id="easy"><a  href="#easy">Легкий</a></li>
+					<li id="normal"><a onclick=k(); href="#normal">Середній</a></li>
+					<li id="hard"><a onclick=k(); href="#hard">Важкий</a></li>
+					<li id="veryhard"><a onclick=k(); href="#veryhard">Дуже важкий</a></li>
+				</ul>
+			</td>
+			<td style="vertical-align:middle;text-align:center;">
+				<p>Залишилось часу: <span id="number"></span></p>
+				<p>Складіть число: <span id="time"></span></p>
+				<div class="triggers"></div>
+				<p>Ваше число: <span id="now"></span></p>
+				<button id="start" onclick=startClick()>Почати Гру</button>
+			</td>
+		</tr>
+	</table>
+</body>
+<script src="script.js" ></script>
+</html>
